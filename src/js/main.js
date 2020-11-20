@@ -7,22 +7,23 @@ import ExchangeService from './exchange-service.js';
 
 function getElements(response) {
   if (response.conversion_rates) {
-    $('#results').text(`Conversion rate ${response.conversion_rates.USD}`);
+    $('#results').text(`Conversion rate ${response.conversion_rates}`);
   } else {
     $('#showErrors').text(`Something went wrong`);
   }
 }
 
-async function getExchangeRates() {
-  const response = await ExchangeService.getExchangeRates();
+async function getExchangeRates(baseCurrency) {
+  const response = await ExchangeService.getExchangeRates(baseCurrency);
   getElements(response);
 }
 
 $(document).ready(function() {
   $('#btn-submit').click(function(event) {
     event.preventDefault();
-    getExchangeRates();
-
+    let baseCurrency = $('#baseCurrency').val();
+    let baseAmount = $("#baseAmount").val();  
+    getExchangeRates(baseCurrency);
   });
 });
 
