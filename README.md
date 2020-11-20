@@ -73,7 +73,10 @@ Copyright (c) 2020 Taylor Delph
 | **Describe ExchangeService:** |||
 | Should correctly return json object if call is successful | standard endpoint | world currency exchange rates |
 | Should correctly return error if call is unsuccessful | standard endpoint | error |
-| Should correctly divide USD amount by Destination Currency exchange rate | 100 USD | 109.67 CHF |
+| Should correctly use user selected base currency for api call | USD | http://enpoint_USD |
+| Should correctly display user selected base currency & amount | 100 USD | 100 USD |
+| Should correctly divide user selected base currency and amount by Destination Currency exchange rate | 100 USD | 109.67 CHF |
+| 
 
 
 
