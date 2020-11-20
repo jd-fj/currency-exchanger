@@ -61,7 +61,6 @@ This project uses the following technologies:
 - webpack
 - npm 
 
-
 ## 📘 License
 
 MIT License
@@ -71,9 +70,12 @@ Copyright (c) 2020 Taylor Delph
 ## Specifications
 | Test | Input | Output |
 |--------|:------:|:-----:|
-| **Describe Calculator:** |||
-|  |  |  |
-|  |  |  |
+| **Describe ExchangeService:** |||
+| Should correctly return json object if call is successful | standard endpoint | world currency exchange rates |
+| Should correctly return error if call is unsuccessful | standard endpoint | error |
+| Should correctly divide USD amount by Destination Currency exchange rate | 100 USD | 109.67 CHF |
+
+
 
 Psudo Testing
 - user enters the amount of us dollars
@@ -84,10 +86,10 @@ Psudo Testing
 to do this I'm going to:
 Create an api key
 Get api key working in Postman
-Make a class for a calculator just like my galactic age calculator
-Contain an api call within the calculation
-Include appropriate api information in the calculation
-Import working calculator into main.js
+Make a class for a calculator (ExchangeService) just like my galactic age calculator
+Contain a fetch API call 
+Import working Exchange Rate calculator into main.js
 Create the flow of async operations in main.js
+USD amount divided by the Destination Currency exchange rate number euqals the amount of currency in Destination Currency
 Create the user input and currency selection in the html
 Test the UI
