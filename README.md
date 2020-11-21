@@ -7,23 +7,23 @@
 
 ## 🚩 Description
 
-This is the full description that should contain what this project does, what I employed to do so, and other important info for someone who has no clue what they're looking at yet. 
+An independent Friday project for Epicodus utilizing a Fetch API call, asynchronous code, and a working development environment. This application will convert a selected currency amount into various different currencies.
 
 ## Stretch Goals
-- include your goals for the project here
+- Build out a user interface that looks very finance-y
 
 ## 🔧 Setup/Installation Requirements
 
-### Necessary Specifications
+### Software Requirements
 
 - To run this project locally you will need to have node. You can check if you have node by running `node -v` in the command line. If you do not have node please find more information and download [here](https://nodejs.org/en/download/)
 
-- You will also need to have a NASA API Key. To get this you will need to request a Key [here](https://api.nasa.gov/).
+- You will also need to have an ExchangeRate-API key. To get this you will need to request a Key [here](https://www.exchangerate-api.com/).
 
 ### Open Locally
 
 #### Opening using GitHub Desktop:
-Go to my GitHub repository here, [](), and click on the green 'Code' button to clone the repository, Open with GitHub Desktop OR Download the ZIP file
+Go to my GitHub repository here [](), and click on the green 'Code' button to clone the repository, Open with GitHub Desktop OR Download the ZIP file
 
 #### To clone using the Command Line:
 1. Push the green 'Clone' button and copy the URL.
@@ -76,8 +76,6 @@ Copyright (c) 2020 Taylor Delph
 | Should correctly use user selected base currency for api call | USD | http://enpoint_USD |
 | Should correctly display user selected base currency & amount | 100 USD | 100 USD |
 | Should correctly divide user selected base currency and amount by Destination Currency exchange rate | 100 USD | 109.67 CHF |
-| 
-
 
 
 Psudo Testing
