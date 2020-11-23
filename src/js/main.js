@@ -4,20 +4,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '.././css/styles.css';
 import ExchangeService from './exchange-service.js';
 
-function getElements(response, type) {
+function getElements(response) {
+  let baseCurrency = $('#baseCurrency').val();
+  let destinationCurrency = $('#destinationCurrencySelect').val();
+  let baseAmount = $("#baseAmount").val();
+  let conversionRate = (response.conversion_rates[destinationCurrency]);
+  let finalAmount = (baseAmount / response.conversion_rates[destinationCurrency]).toFixed(2);
+
   if (response.conversion_rates) {
-    // console.log(Object.values(response.conversion_rates))
-    for (let key of Object.entries(response.conversion_rates)) {
-      if (key[0] === type) {
-        console.log(key);
-        return key
-      }
-    }
-    $('#results').append(`Conversion rate ${response}`);
+    $('#selectedCurrency').append(`Base Currency: ${baseCurrency}`);
+    $('#selectedAmount').append(`Base Amount: ${baseAmount}`);
+    $('#conversionRate').append(`Converstion rate: ${conversionRate}`);
+    $('#finalAmount').append(`Final total: ${finalAmount} in ${destinationCurrency}`);
   } else {
     $('#showErrors').text(`Something went wrong`);
-  }
-  
+  } 
 }
 
 async function getExchangeRates(baseCurrency) {
@@ -29,12 +30,10 @@ $(document).ready(function() {
   $('#btn-submit').click(function(event) {
     event.preventDefault();
     let baseCurrency = $('#baseCurrency').val();
-    let baseAmount = $("#baseAmount").val();  
     getExchangeRates(baseCurrency);
-    $('#selectedAmount').append(baseAmount)
-    $('#selectedCurrency').append(baseCurrency)
 
   });
 });
 
 // response.conversion_rates.currency_code
+// response.conversion_rates[baseCurrency]
