@@ -12,6 +12,7 @@ function getElements(response) {
   let finalAmount = (baseAmount / response.conversion_rates[destinationCurrency]).toFixed(2);
 
   if (response.conversion_rates) {
+    console.log(response.conversion_rates);
     $('#selectedCurrency').append(`Base Currency: ${baseCurrency}`);
     $('#selectedAmount').append(`Base Amount: ${baseAmount}`);
     $('#conversionRate').append(`Converstion rate: ${conversionRate}`);
@@ -29,6 +30,7 @@ async function getExchangeRates(baseCurrency) {
 $(document).ready(function() {
   $('#btn-submit').click(function(event) {
     event.preventDefault();
+
     let baseCurrency = $('#baseCurrency').val();
     getExchangeRates(baseCurrency);
 
