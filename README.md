@@ -1,7 +1,7 @@
 
 # Currency Exchanger
 
-#### A brief description, 11.20.2020
+#### Exchange rates for global currencies using Fetch API calls. 11.20.2020
 
 #### By _**Taylor Delph**_
 
@@ -76,21 +76,3 @@ Copyright (c) 2020 Taylor Delph
 | Should correctly use user selected base currency for api call | USD | http://enpoint_USD |
 | Should correctly display user selected base currency & amount | 100 USD | 100 USD |
 | Should correctly divide user selected base currency and amount by Destination Currency exchange rate | 100 USD | 109.67 CHF |
-
-
-Psudo Testing
-- user enters the amount of us dollars
-- user selects what currency they'd like to exchange to
-- user submits info and sees amount converted from USD to selected currency
-- if destination currency is not represented, display to user that currency is not avail
-
-to do this I'm going to:
-Create an api key
-Get api key working in Postman
-Make a class for a calculator (ExchangeService) just like my galactic age calculator
-Contain a fetch API call 
-Import working Exchange Rate calculator into main.js
-Create the flow of async operations in main.js
-USD amount divided by the Destination Currency exchange rate number euqals the amount of currency in Destination Currency
-Create the user input and currency selection in the html
-Test the UI
