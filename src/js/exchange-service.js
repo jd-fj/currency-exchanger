@@ -13,7 +13,3 @@ export default class ExchangeService {
     } 
   }
 }
-
-// USD amount divided by the Destination Currency exchange rate number euqals the amount of currency in Destination Currency
-
-// response.conversion_rates.{currency_code}
