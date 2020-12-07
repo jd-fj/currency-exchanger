@@ -3,7 +3,6 @@ export default class ExchangeService {
   static async getExchangeRates(baseCurrency) {
     try { 
       const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${baseCurrency}`);
-      console.log(response);
       if (!response.ok) {
         throw Error(response.statusText);
       } 

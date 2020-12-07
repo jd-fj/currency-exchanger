@@ -4,6 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeService from './js/exchange-service.js';
 
+function clearFields() {
+  $('#selectedCurrency').empty();
+  $('#selectedAmount').empty();
+  $('#conversionRate').empty();
+  $('#finalAmount').empty();
+  $('#showErrors').empty();
+}
+
 function getElements(response) {
   if (response.conversion_rates) {
     let baseCurrency = $('#baseCurrency').val();
@@ -30,6 +38,7 @@ async function getExchangeRates(baseCurrency) {
 $(document).ready(function() {
   $('#btn-submit').click(function(event) {
     event.preventDefault();
+    clearFields();
     let baseCurrency = $('#baseCurrency').val();
     getExchangeRates(baseCurrency);
   });
