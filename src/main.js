@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './src/css/styles.css';
-import ExchangeService from './src/js/exchange-service.js';
+import './css/styles.css';
+import ExchangeService from './js/exchange-service.js';
 
 function getElements(response) {
   if (response.conversion_rates) {
