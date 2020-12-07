@@ -1,8 +1,24 @@
 .jumbotron {
-  background-color: rgb(188, 255, 191);
+  background: url(https://media.giphy.com/media/12pJ8OxSWwO86Y/giphy.gif);
+  background-position: center;
+  background-size: 30%;
+}
+
+#jumbText {
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+  color: rgb(159, 255, 218);
+  background-color: white;
+  height: auto;
+  word-wrap: break-word; 
 }
 
 #btn-submit {
   margin-top: 20px;
   width: 100%;
+}
+
+body {
+  background-color: rgb(188, 255, 191);
 }
