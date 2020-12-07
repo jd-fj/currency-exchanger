@@ -1,15 +1,16 @@
 .jumbotron {
   background: url(https://media.giphy.com/media/12pJ8OxSWwO86Y/giphy.gif);
   background-position: center;
-  background-size: 30%;
+  background-size: 35%;
+  opacity: .8;
 }
 
 #jumbText {
   margin-left: 30%;
   margin-right: 30%;
   text-align: center;
-  color: rgb(159, 255, 218);
-  background-color: white;
+
+  background-color: rgba(255, 255, 255, 0.625);
   height: auto;
   word-wrap: break-word; 
 }
@@ -20,5 +21,5 @@
 }
 
 body {
-  background-color: rgb(188, 255, 191);
+  background-color: rgba(218, 255, 220, 0.523);
 }
