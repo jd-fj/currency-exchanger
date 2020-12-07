@@ -10,14 +10,16 @@ function getElements(response) {
     let destinationCurrency = $('#destinationCurrencySelect').val();
     let baseAmount = $("#baseAmount").val();
     let conversionRate = (response.conversion_rates[destinationCurrency]);
-    let finalAmount = (baseAmount * response.conversion_rates[destinationCurrency]).toFixed(2);
+    let finalAmount = (baseAmount * conversionRate).toFixed(2);
     $('#selectedCurrency').append(`Base Currency: ${baseCurrency}`);
     $('#selectedAmount').append(`Base Amount: ${baseAmount}`);
     $('#conversionRate').append(`Converstion rate: ${conversionRate}`);
     $('#finalAmount').append(`Final total: ${finalAmount} in ${destinationCurrency}`);
+  } else if (response.result == "error") {
+    $('#showErrors').text(`${response.result}: We do not support this currency!`);
   } else {
     $('#showErrors').text(`Error message: ${response}`);
-  } 
+  }
 }
 
 async function getExchangeRates(baseCurrency) {
